@@ -1,29 +1,37 @@
 const connection = require("../config/connection");
 
+function printQuestionMarks(num) {
+	var arr = [];
+	for (var i = 0; i < num; i++) {
+		arr.push("?");
+	}
+	return arr.toString();
+}
+
 const orm = {
     selectAll: (tableInput, cb) => {
         const queryString = `SELECT * FROM ??;`;
-        connection.query(queryString, [tableInput], (err, result) => {
+        connection.query(queryString, [tableInput, cb], (err, result) => {
             if (err) throw err;
             cb(result);
         });
     },
-    insertOne: (table, vals, cb) => {
-        const queryString = "INSERT INTO ?? (name, devoured) VALUES (?, ?);";
+    insertOne: (table, cols, vals, cb) => {
+        const queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length,)});`;
 
         console.log(queryString);
 
-        connection.query(queryString, [table, vals[0], vals[1]], (err, result) => {
+        connection.query(queryString, vals, (err, result) => {
             if (err) throw err;
             cb(result);
         })
     },
-    update: (table, objColVals, condition, cb) => {
-        const queryString = "UPDATE ?? SET ?? WHERE ?;";
+    updateOne: (table, objColVals, condition, cb) => {
+        const queryString = `UPDATE ?? SET ? WHERE ${condition};`;
 
         console.log(queryString);
 
-        connection.query(queryString, [table, objColVals, condition], (err, result) => {
+        connection.query(queryString, [table, objColVals], (err, result) => {
             if (err) throw err;
             cb(result);
         })

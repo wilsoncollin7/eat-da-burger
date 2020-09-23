@@ -14,20 +14,21 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/burgers/create"), (req, res) => {
-    burger.insertOne([
-        req.body.name, req.body.devoured
-    ], (result) => {
+router.post("/api/burger"), (req, res) => {
+    burger.insertOne(
+        ["name", "devoured"],
+        [req.body.name, req.body.devoured], 
+        (result) => {
         res.redirect("/");
     });
 };
 
-router.put("/api/burgers/:id", (req, res) => {
+router.put("/api/burger/:id", (req, res) => {
     const condition = "id = " + req.params.id;
 
     console.log("condition", condition);
 
-    burger.update({
+    burger.updateOne({
         devoured: req.body.devoured
     }, condition, (result) => {
         if (result.changedRows == 0) {

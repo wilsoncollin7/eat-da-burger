@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(() => {
     $(".devour").on("click", (event) => {
         const id = $(this).data("id");
         const devoured = $(this).data("devoured");
@@ -7,7 +7,7 @@ $(() => {
             devoured: devoured
         };
 
-        $.ajax("/api/burgers" + id, {
+        $.ajax("/api/burger" + id, {
             type: "PUT",
             data: isDevoured
         }).then(() => {
@@ -26,7 +26,7 @@ $(() => {
 
         console.log(newBurger)
 
-        $.ajax("/api/burgers", {
+        $.ajax("/api/burger", {
             type: "POST",
             data: newBurger
         }).then(() => {
@@ -34,16 +34,5 @@ $(() => {
             location.reload();
         })
     })
-
-
-
-
-
-
-
-
-
-
-
 
 })
