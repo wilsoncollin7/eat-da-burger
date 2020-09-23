@@ -1,13 +1,12 @@
 $(document).ready(() => {
     $(".devour").on("click", (event) => {
         const id = $(this).data("id");
-        const devoured = $(this).data("devoured");
         console.log("dev btn clicked")
         const isDevoured = {
-            devoured: devoured
+            devoured: 1
         };
 
-        $.ajax("/api/burger" + id, {
+        $.ajax("/api/burgers" + id, {
             type: "PUT",
             data: isDevoured
         }).then(() => {
@@ -17,8 +16,11 @@ $(document).ready(() => {
         )
     });
 
-    $(".create-form").on("submit", event => {
+    $(".create-form").on("submit", (event) => {
+        console.log("made it here")
         event.preventDefault();
+
+        console.log("made it here")
 
         const newBurger = {
             name: $("#bur").val().trim()
@@ -26,7 +28,7 @@ $(document).ready(() => {
 
         console.log(newBurger)
 
-        $.ajax("/api/burger", {
+        $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
         }).then(() => {

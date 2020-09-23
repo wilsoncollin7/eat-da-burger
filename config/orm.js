@@ -16,22 +16,22 @@ const orm = {
             cb(result);
         });
     },
-    insertOne: (table, cols, vals, cb) => {
-        const queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length,)});`;
+    insertOne: (vals, cb) => {
+        const queryString = `INSERT INTO burgers (name) VALUES (${printQuestionMarks(vals.length,)});`;
 
         console.log(queryString);
 
-        connection.query(queryString, vals, (err, result) => {
+        connection.query(queryString, [vals], (err, result) => {
             if (err) throw err;
             cb(result);
         })
     },
-    updateOne: (table, objColVals, condition, cb) => {
-        const queryString = `UPDATE ?? SET ? WHERE ${condition};`;
+    updateOne: (objColVals, condition, cb) => {
+        const queryString = `UPDATE burgers SET  devoured = ? WHERE ${condition};`;
 
         console.log(queryString);
 
-        connection.query(queryString, [table, objColVals], (err, result) => {
+        connection.query(queryString, [objColVals], (err, result) => {
             if (err) throw err;
             cb(result);
         })

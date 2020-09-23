@@ -10,16 +10,17 @@ router.get("/", (req, res) => {
             burgers: data
         };
         console.log(hbsObject);
+        console.log("select all")
         res.render("index", hbsObject);
     });
 });
 
-router.post("/api/burger"), (req, res) => {
+router.post("/api/burgers"), (req, res) => {
     burger.insertOne(
-        ["name", "devoured"],
-        [req.body.name, req.body.devoured], 
+        req.body.name, 
         (result) => {
-        res.redirect("/");
+        res.json({ id: result.insertId });
+        console.log("insert one")
     });
 };
 
