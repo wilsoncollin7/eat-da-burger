@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "In this assignment, you'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Be sure to follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.",
   "main": "server.js",
-"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wilsoncollin7/eat-da-burger.git"
@@ -23,5 +19,8 @@
     "express-handlebars": "^5.1.0",
     "mysql": "^2.18.1",
     "path": "^0.12.7"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+ }
 }
