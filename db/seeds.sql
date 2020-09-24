@@ -1,3 +1,7 @@
+-- =============================================================
+-- seeds for the database
+-- =============================================================
+
 USE eat_da_burger;
 
 INSERT INTO burgers (name) VALUES ("Cheese Burger");

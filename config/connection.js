@@ -1,3 +1,6 @@
+// =============================================================
+// connection file
+// =============================================================
 const mysql = require("mysql");
 
 let connection;
@@ -19,4 +22,7 @@ connection.connect((err) => {
     console.log("CONNECTED AS ID " + connection.threadId);
 });
 
+// =============================================================
+// export connection
+// =============================================================
 module.exports = connection;

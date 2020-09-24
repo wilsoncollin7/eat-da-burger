@@ -1,3 +1,6 @@
+-- =============================================================
+-- schema for the database
+-- =============================================================
 DROP DATABASE IF EXISTS eat_da_burger;
 
 CREATE DATABASE eat_da_burger;
