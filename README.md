@@ -3,7 +3,7 @@
 
   This is a resturant app that lets the user input burgers they would like to eat! When a user selects the EAT button, the burger is moved from the burger menu to the eaten list. The user can enter as many burgers as the want!
 
-  <img scr="public/photos/burger.JPG">
+  <img src="public/photos/burger.JPG">
 
   ## Table of Contents
 
