@@ -15,14 +15,15 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/api/burgers"), (req, res) => {
+router.post("/api/burger", (req, res) => {
+    console.log("post")
     burger.insertOne(
         req.body.name, 
         (result) => {
         res.json({ id: result.insertId });
         console.log("insert one")
     });
-};
+});
 
 router.put("/api/burgers/:id", (req, res) => {
     const condition = "id = " + req.params.id;

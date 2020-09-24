@@ -1,4 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
 body {
-    background-color: rgb(255, 217, 0);
-    color: rgb(238, 0, 0);
+    background: radial-gradient(rgb(243, 203, 93), rgba(255,199,44));
+    color: white;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 10rem;
+    font-weight: lighter;
+    color: rgba(218, 41, 28);
+}
+h2 {
+    font-size: 4rem;
+    padding: 2rem;
+    margin: 0 3rem;
+}
+ul {
+    list-style-type: none;
+    padding: 1rem;
+}
+li {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+label, input, button {
+    font-size: 2.5rem;
+}
+
+.header-container {
+    width: 80%;
+    margin: auto;
+    min-height: 10vh;
+    padding: 3rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main {
+    display: grid;
+    margin: 0 auto;
+    min-height: 50vh;
+    grid-template-columns: 10% repeat(2,2fr) 10%;
+    grid-template-rows: 0.2fr 0.3fr;
+    background-color: rgba(218, 41, 28);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    width: 90%;
+    padding: 2rem;
+}
+.not-eaten-header {
+    grid-column: 2/3;
+    align-self: center;
+    text-align: center;
+    background-color: rgb(243, 203, 93);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+}
+.eaten-header {
+    align-self: center;
+    text-align: center;
+    background-color: rgb(243, 203, 93);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.not-eaten-list {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin: 0 auto;
+}
+.eaten-list {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    margin: 0 auto;
+    color: rgb(243, 203, 93);
+}
+.devour {
+    float: right;
+    margin-left: 1rem;
+}
+button {
+    padding: 1rem;
+}
+
+
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    margin-top: 5rem;
+    background-color: rgba(218, 41, 28);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    text-align: center;
+    padding: 2rem;
+}
+.form-header {
+    padding: 1rem;
+    background-color: rgb(243, 203, 93);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.form-group {
+    padding: 2rem;
+}
+#bur {
+    padding: 2rem;
+    text-align: center;
 }

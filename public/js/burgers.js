@@ -1,14 +1,10 @@
 $(document).ready(function() {
-    console.log("javascript")
 
     $(".devour").on("click", function(event) {
         const id = $(this).data("id");
-        console.log("dev btn clicked")
         const isDevoured = {
             devoured: 1
         };
-
-        console.log(id)
 
         $.ajax("/api/burgers/" + id, {
             type: "PUT",
@@ -27,13 +23,16 @@ $(document).ready(function() {
             name: $("#bur").val().trim()
         };
 
-        $.ajax("/api/burgers", {
+        console.log(newBurger)
+        
+
+        $.ajax("/api/burger", {
             type: "POST",
             data: newBurger
         }).then(function() {
-            console.log("created burger")
-            location.reload();
-        })
-    })
-
+                console.log("created burger")
+                location.reload();
+            }
+        )
+    });
 })

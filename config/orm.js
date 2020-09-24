@@ -1,13 +1,5 @@
 const connection = require("../config/connection");
 
-function printQuestionMarks(num) {
-	var arr = [];
-	for (var i = 0; i < num; i++) {
-		arr.push("?");
-	}
-	return arr.toString();
-}
-
 const orm = {
     selectAll: (tableInput, cb) => {
         const queryString = `SELECT * FROM ??;`;
@@ -17,14 +9,15 @@ const orm = {
         });
     },
     insertOne: (vals, cb) => {
-        const queryString = `INSERT INTO burgers (name) VALUES (${printQuestionMarks(vals.length,)});`;
+        const queryString = "INSERT INTO burgers (name) VALUES (?)";
 
         console.log(queryString);
 
-        connection.query(queryString, [vals], (err, result) => {
+        connection.query(queryString, [vals, cb], function(err, result) {
             if (err) throw err;
+            console.log("made it before cb")
             cb(result);
-        })
+        });
     },
     updateOne: (objColVals, condition, cb) => {
         const queryString = `UPDATE burgers SET devoured = true WHERE ${condition};`;
