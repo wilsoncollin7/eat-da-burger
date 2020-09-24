@@ -27,7 +27,7 @@ const orm = {
         })
     },
     updateOne: (objColVals, condition, cb) => {
-        const queryString = `UPDATE burgers SET  devoured = ? WHERE ${condition};`;
+        const queryString = `UPDATE burgers SET devoured = true WHERE ${condition};`;
 
         console.log(queryString);
 

@@ -1,37 +1,36 @@
-$(document).ready(() => {
-    $(".devour").on("click", (event) => {
+$(document).ready(function() {
+    console.log("javascript")
+
+    $(".devour").on("click", function(event) {
         const id = $(this).data("id");
         console.log("dev btn clicked")
         const isDevoured = {
             devoured: 1
         };
 
-        $.ajax("/api/burgers" + id, {
+        console.log(id)
+
+        $.ajax("/api/burgers/" + id, {
             type: "PUT",
             data: isDevoured
-        }).then(() => {
-                console.log("changed devoured to", devoured);
+        }).then(function() {
+                console.log("changed devoured");
                 location.reload();
             }
         )
     });
 
-    $(".create-form").on("submit", (event) => {
-        console.log("made it here")
+    $(".create-form").on("submit", function(event) {
         event.preventDefault();
-
-        console.log("made it here")
 
         const newBurger = {
             name: $("#bur").val().trim()
         };
 
-        console.log(newBurger)
-
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
-        }).then(() => {
+        }).then(function() {
             console.log("created burger")
             location.reload();
         })
