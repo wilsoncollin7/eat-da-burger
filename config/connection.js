@@ -14,7 +14,7 @@ if(process.env.JAWSDB_URL) {
       password: "dean",
       database: "eat_da_burger"
     });
-
+  }
 
 connection.connect((err) => {
     if (err) throw err;
