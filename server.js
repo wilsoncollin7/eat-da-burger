@@ -1,9 +1,9 @@
 // =============================================================
 // server file
 // =============================================================
-const express = require("express");
+let express = require("express");
 
-const PORT = process.env.PORT || 8080;
+let PORT = process.env.PORT || 8080;
 
 const app = express();
 
