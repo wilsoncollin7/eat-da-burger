@@ -1,5 +1,5 @@
 # Eat-Da-Burger /  Express Handlebars 
-  [![GitHub followers](https://img.shields.io/github/followers/wilsoncollin7.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/wilsoncollin7?tab=followers) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![GitHub license](https://img.shields.io/badge/Made%20by-%40Wilsoncollin7-orange) [![GitHub followers](https://img.shields.io/github/followers/wilsoncollin7.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/wilsoncollin7?tab=followers) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   This is a resturant app that lets the user input burgers they would like to eat! When a user selects the EAT button, the burger is moved from the burger menu to the eaten list. The user can enter as many burgers as the want!
 
@@ -22,7 +22,11 @@
 
   ## Usage
 
-  This project uses MySQL, Node, Express, Handlebars, and a homemade ORM! The site follows MVC design patters and queries and routes all of the data through a database! The site is generated using the HTML Handelbars.
+  This project uses MySQL, Node, Express, Handlebars, and a homemade ORM! The site follows MVC design patters and queries and routes all of the data through a database! The site is generated using the HTML Handelbars. Run:
+  ```
+  npm install
+  npm start
+  ```
 
   ## License
 
@@ -39,4 +43,6 @@
   ## Questions
 
   For any questions you might have, you can email me at wilsoncollin7@gmail.com. You can also check out my [GitHub Profile](https://github.com/wilsoncollin7).
+  
+  <img src="https://avatars2.githubusercontent.com/u/65512203?s=460&u=fb31e3048d1cfa064b8ee0ec696be762b96343f8&v=4" width="200" style="border-radius:50%"/>
 
