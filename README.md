@@ -1,5 +1,5 @@
 # Eat-Da-Burger /  Express Handlebars 
-  ![GitHub license](https://img.shields.io/badge/Made%20by-%40Wilsoncollin7-orange) [![GitHub followers](https://img.shields.io/github/followers/wilsoncollin7.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/wilsoncollin7?tab=followers) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ![GitHub license](https://img.shields.io/badge/Made%20by-%40Wilsoncollin7-orange) [![GitHub followers](https://img.shields.io/github/followers/wilsoncollin7.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/wilsoncollin7?tab=followers) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Man Hours](https://img.shields.io/endpoint?url=https%3A%2F%2Fmh.jessemillar.com%2Fhours%3Frepo%3Dhttps%3A%2F%2Fgithub.com%2Fwilsoncollin7%2Feat-da-burger.git)](https://jessemillar.com/r/man-hours)
 
   This is a resturant app that lets the user input burgers they would like to eat! When a user selects the EAT button, the burger is moved from the burger menu to the eaten list. The user can enter as many burgers as the want!
 
